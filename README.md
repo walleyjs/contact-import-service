@@ -52,7 +52,6 @@ Its here to help you see the e2e flow. Of course, yoou are free to run individua
   }
   ```
 - Uploads the full `data` array to **Supabase Storage**, e.g. `imports/{jobId}.json`
-- **IMPORTANT**: Must stream and process data without loading entire file into memory
 - Queues a job using **Graphile Worker**
 - Responds with:
   ```json
@@ -65,7 +64,6 @@ Its here to help you see the e2e flow. Of course, yoou are free to run individua
 
 **Behavior:**
 - Uses [Graphile Worker](https://github.com/graphile/worker)
-- **IMPORTANT**: Must stream and process data without loading entire file into memory
 - **Inserts contacts** into Supabase
 
 ### 3. **Database Schema: `contacts` Table**
@@ -82,11 +80,10 @@ CREATE TABLE contacts (
 
 ## What We're Looking For
 
-- Clean TypeScript code
-- **Memory-efficient streaming** - Never load entire datasets into memory
-- Clear API and worker separation
+- Support for large payloads + large scale
+- Efficient use of resources
+- Maintainable code
 - Use of Supabase (Storage + PostgREST)
-- Good error handling
 
 ## What We're Not Looking For
 
@@ -95,8 +92,7 @@ CREATE TABLE contacts (
 
 ## Bonus Features (Optional)
 
-- Add Prometheus metrics to track the number of imported contacts
-- Support CSV file upload instead of JSON
+- Add Prometheus metrics
 - Write unit tests for your implementation
 - Add data validation for contacts
 
@@ -104,7 +100,7 @@ CREATE TABLE contacts (
 
 - text us! We are here to help.
 
-## Links
+## Interesting Links
 - [Graphile Worker](https://worker.graphile.org/)
 - [Resumable Uploads](https://supabase.com/docs/guides/storage/uploads/resumable-uploads)
 - [Creating Buckets](https://supabase.com/docs/guides/storage/buckets/creating-buckets?queryGroups=language&language=sql)

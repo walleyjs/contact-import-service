@@ -6,8 +6,6 @@
 	"main": "dist/api/index.js",
 	"scripts": {
 		"dev": "dotenv -- tsx watch api/index.ts",
-		"worker": "dotenv -- tsx worker/runner.ts",
-		"worker:migrate": "dotenv -- tsx worker/migrate.ts",
 		"supabase:start": "supabase start",
 		"supabase:stop": "supabase stop",
 		"supabase:reset": "supabase db reset",
