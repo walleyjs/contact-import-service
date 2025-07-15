@@ -6,4 +6,9 @@ CREATE TABLE IF NOT EXISTS contacts (
   imported_at TIMESTAMP DEFAULT now()
 );
 
+insert into storage.buckets
+  (id, name, public)
+values
+  ('imports', 'imports', false);
+
 

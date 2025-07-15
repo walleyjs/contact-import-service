@@ -29,11 +29,13 @@ pnpm run dev
 pnpm run e2e
 ```
 
-The E2E test will:
+The E2E script will:
 - Check Supabase is running
 - Start the API service
 - Make a sample import request
 - Run the worker to process the job
+
+Its here to help you see the e2e flow. Of course, yoou are free to run individual commands!
 
 ## Requirements
 
@@ -100,5 +102,11 @@ CREATE TABLE contacts (
 ## Troubleshooting
 
 - text us! We are here to help.
+
+## Links
+- [Graphile Worker](https://worker.graphile.org/)
+- [Resumable Uploads](https://supabase.com/docs/guides/storage/uploads/resumable-uploads)
+- [Creating Buckets](https://supabase.com/docs/guides/storage/buckets/creating-buckets?queryGroups=language&language=sql)
+
 
 Good luck! 🚀
