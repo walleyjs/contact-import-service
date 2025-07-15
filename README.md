@@ -1,6 +1,6 @@
-# 🧪 Take-Home Backend Exercise
+# Take-Home Exercise
 
-## 📋 Task: Build an Import Pipeline Using Hono + Supabase
+## Task: Build an Import Pipeline Using Hono + Supabase + Graphile Worker
 
 ### Overview
 
@@ -10,7 +10,7 @@ Build a minimal backend system using **Hono** (for the API) and **Supabase** (fo
 2. Offload the data to **Supabase Storage**
 3. Run a **worker** that downloads, parses, and imports the data into a `contacts` table
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # 1. Install dependencies
@@ -35,7 +35,7 @@ The E2E test will:
 - Make a sample import request
 - Run the worker to process the job
 
-## 🎯 Requirements
+## Requirements
 
 ### 1. **API: `POST /import`**
 
@@ -77,7 +77,7 @@ CREATE TABLE contacts (
 );
 ```
 
-## 🧪 What We're Looking For
+## What We're Looking For
 
 - Clean TypeScript code
 - **Memory-efficient streaming** - Never load entire datasets into memory
@@ -85,19 +85,19 @@ CREATE TABLE contacts (
 - Use of Supabase (Storage + PostgREST)
 - Good error handling
 
-## 🧪 What We're Not Looking For
+## What We're Not Looking For
 
 - Authentication
 - Progress reporting
 
-## 🧪 Bonus Features (Optional)
+## Bonus Features (Optional)
 
 - add Prometheus metrics to track the number of imported contacts
 - Support CSV file upload instead of JSON
 - Write unit tests for your implementation
 - Add data validation for contacts
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 - text us! We are here to help.
 
