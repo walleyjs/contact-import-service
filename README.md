@@ -52,6 +52,7 @@ Its here to help you see the e2e flow. Of course, yoou are free to run individua
   }
   ```
 - Uploads the full `data` array to **Supabase Storage**, e.g. `imports/{jobId}.json`
+- **IMPORTANT**: Must stream and process data without loading entire file into memory
 - Queues a job using **Graphile Worker**
 - Responds with:
   ```json
@@ -94,7 +95,7 @@ CREATE TABLE contacts (
 
 ## Bonus Features (Optional)
 
-- add Prometheus metrics to track the number of imported contacts
+- Add Prometheus metrics to track the number of imported contacts
 - Support CSV file upload instead of JSON
 - Write unit tests for your implementation
 - Add data validation for contacts
