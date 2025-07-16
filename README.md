@@ -31,11 +31,11 @@ pnpm run e2e
 
 The E2E script will:
 - Check Supabase is running
-- Start the API service
+- Check the the API service is running
 - Make a sample import request
 - Run the worker to process the job
 
-Its here to help you see the e2e flow. Of course, yoou are free to run individual commands!
+Its here to help you see the e2e flow. Of course, you are free to run individual commands!
 
 ## Requirements
 
